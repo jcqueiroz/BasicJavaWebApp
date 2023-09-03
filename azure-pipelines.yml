@@ -9,7 +9,7 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '14cbd5a7-ec94-46ba-b314-cc0fc972a161'
+  azureSubscription: 'db0b05b7-6110-420e-beb9-0541818d89f3'
 
   # Web app name
   webAppName: 'javawebapp-jcqueiroz'
@@ -34,18 +34,6 @@ stages:
       displayName: 'Maven Package'
       inputs:
         mavenPomFile: 'pom.xml'
-
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: true
-    sqMavenPluginVersionChoice: 'pom'
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
