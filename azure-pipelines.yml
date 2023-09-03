@@ -44,6 +44,7 @@ stages:
       displayName: 'Maven Package'
       inputs:
         mavenPomFile: 'pom.xml'
+        
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
