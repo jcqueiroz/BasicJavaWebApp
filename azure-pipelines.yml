@@ -15,7 +15,7 @@ variables:
   webAppName: 'javawebapp-jcqueiroz'
 
   # Environment name
-  environmentName: 'javawebapp-jcqueiroz'
+  environmentName: 'javawebapp-puc-minas-curso-sre-ci-cd'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
